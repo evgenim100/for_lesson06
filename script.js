@@ -52,10 +52,21 @@ if (randNumber < userNumber) {
   
 };
 };
-count++;
+if (count==10) {
+  if (confirm('Попытки закончились, хотите сыграть еще?')) {
+    randNumber = getRandomInt(101);
+    console.log('randNumber: ', randNumber);
+    count = 0;
+    gessNumber();
+  }
+  else {
+    count=0;
+  }
+};
 
 };
+
 gessNumber();
-console.dir(gessNumber);
+
 
 
